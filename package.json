@@ -1,0 +1,28 @@
+{
+  "name": "facebook-calendar",
+  "version": "1.0.0",
+  "description": "A Javascript solution for Facebook's famous code challenge.",
+  "main": "calendar.js",
+  "scripts": {
+    "build": "rollup --config",
+    "dev": "rollup --config --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickbalestra/facebook-calendar.git"
+  },
+  "keywords": [],
+  "author": { 
+    "name" : "Nick Balestra",
+    "email" : "nick@balestra,cg",
+    "url" : "http://nick.balestra,ch/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickbalestra/facebook-calendar/issues"
+  },
+  "homepage": "https://github.com/nickbalestra/facebook-calendar#readme",
+  "devDependencies": {
+    "rollup": "^0.51.3"
+  }
+}
