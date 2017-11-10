@@ -1,10 +1,4 @@
-const config = {
-  width: 600,
-  dayStart: 9,
-  dayEnd: 19,
-  start: 0,
-  end: 12 * 60
-};
+import {eventsContainerWidth, eventsLRPadding} from './config';
 
 const byTime = (a, b) =>
   a.start > b.start || (a.start === b.start && a.end > b.end) ? 1 : -1;
@@ -68,7 +62,7 @@ const getRows = events => {
 
 const addWidths = rows => {
   return rows.sort(byLength).map(row => {
-    let width = config.width / row.length;
+    let width = (eventsContainerWidth - eventsLRPadding * 2) / row.length;
     row.some(event => {
       if (event.width) {
         width = event.width;
@@ -119,6 +113,9 @@ function layOutAlgo(events) {
   const rows = getRows(events);
   const rowsWithWidths = addWidths(rows);
   const rowsWithOffsetsAndWidth = addOffsets(rowsWithWidths);
-  // console.table(processed);
-  return uniques(flatten(rowsWithOffsetsAndWidth));
+  const processed = uniques(flatten(rowsWithOffsetsAndWidth));
+  console.table(processed);
+  return processed;
 }
+
+export default layOutAlgo;
