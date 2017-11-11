@@ -8,6 +8,6 @@ export default {
     format: "iife"
   },
   plugins: [
-    // uglify({mangle:true, compress:true}, minify)
+    uglify({mangle:true, compress:true}, minify)
   ]
 };
