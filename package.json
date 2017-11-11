@@ -12,10 +12,10 @@
     "url": "git+https://github.com/nickbalestra/facebook-calendar.git"
   },
   "keywords": [],
-  "author": { 
-    "name" : "Nick Balestra",
-    "email" : "nick@balestra,cg",
-    "url" : "http://nick.balestra,ch/"
+  "author": {
+    "name": "Nick Balestra",
+    "email": "nick@balestra,cg",
+    "url": "http://nick.balestra,ch/"
   },
   "license": "MIT",
   "bugs": {
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/nickbalestra/facebook-calendar#readme",
   "devDependencies": {
-    "rollup": "^0.51.3"
+    "rollup": "^0.51.3",
+    "rollup-plugin-uglify": "^2.0.1",
+    "uglify-es": "^3.1.9"
   }
 }
