@@ -1,6 +1,6 @@
-import connect from "../../libs/connect";
 import { css } from "../../libs/cssInJs";
 import eventsContainer from "./eventsContainer";
+import layOutEvents from "./layOutEvents";
 
 const events = ({ eventData, eventsProps, mountedComponents }) => {
   const {eventsContainerWidth, eventsContainerHeight, eventsLRPadding} = eventsProps;
@@ -16,17 +16,18 @@ const events = ({ eventData, eventsProps, mountedComponents }) => {
   `;
 
   if (eventData.length) {
-    eventData.forEach(event => {
+    layOutEvents(eventData, event => {
       const eventNode = document.createElement("article");
-
+      const width = (eventsContainerWidth - 2 * eventsLRPadding) / event._intersectionGroup.length;
       eventNode.className = css`
+        border-top: 1px solid red;
         position: absolute;
         border-left: 8px solid #3b5998;
         background-color: rgba(0,0,0,.1);
         top: ${event.start}px;
-        left: ${event.width * event.offset + eventsLRPadding}px;
         height: ${event.end - event.start}px;
-        width: ${event.width}px; 
+        width: ${width}px;
+        left: ${width * event.offset + eventsLRPadding}px;
       `;
 
       eventsNode.appendChild(eventNode);
@@ -38,5 +39,10 @@ const events = ({ eventData, eventsProps, mountedComponents }) => {
   }
   return mountedComponents.events = eventsNode;
 };
+
+
+const connect = (container, component) => props =>
+container(Object.assign({}, props, { render: component }));
+
 
 export default connect(eventsContainer, events);
