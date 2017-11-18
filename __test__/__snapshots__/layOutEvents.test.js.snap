@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`group events by conflicts 1`] = `
+Object {
+  "_intersectionGroup": Object {
+    "end": 400,
+    "length": 3,
+  },
+  "end": 400,
+  "offset": 0,
+  "start": 0,
+}
+`;
+
+exports[`group events by conflicts 2`] = `
+Object {
+  "_intersectionGroup": Object {
+    "end": 600,
+    "length": 2,
+  },
+  "end": 600,
+  "offset": 0,
+  "start": 400,
+}
+`;
+
+exports[`group events by conflicts 3`] = `
+Object {
+  "_intersectionGroup": Object {
+    "end": 400,
+    "length": 3,
+  },
+  "end": 300,
+  "offset": 1,
+  "start": 100,
+}
+`;
+
+exports[`group events by conflicts 4`] = `
+Object {
+  "_intersectionGroup": Object {
+    "end": 600,
+    "length": 2,
+  },
+  "end": 500,
+  "offset": 1,
+  "start": 400,
+}
+`;
+
+exports[`group events by conflicts 5`] = `
+Object {
+  "_intersectionGroup": Object {
+    "end": 400,
+    "length": 3,
+  },
+  "end": 200,
+  "offset": 2,
+  "start": 100,
+}
+`;
+
+exports[`group events by conflicts 6`] = `
+Object {
+  "_intersectionGroup": Object {
+    "end": 400,
+    "length": 3,
+  },
+  "end": 300,
+  "offset": 2,
+  "start": 200,
+}
+`;
