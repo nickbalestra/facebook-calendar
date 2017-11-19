@@ -1,40 +1,64 @@
 <!DOCTYPE html>
-  <title>Facebook calendar</title>
-  <style>
-    /* Box-sizing: Border-box FTW https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-    html { box-sizing: border-box; }
-    *, *:before, *:after { box-sizing: inherit; }
-  </style>
+<title>Calendar</title>
+<style>
+  html,
+  body {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
 
+  /* Box-sizing: Border-box FTW https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .container {
+    height: 100%;
+    min-height: 800px;
+    display: flex;
+    padding-top: 40px;
+    justify-content: center;
+    background-color: #E9EBEE;
+  }
+</style>
+
+<div class="container">
   <div id="cal"></div>
-  <script src="dist/calendar.min.js"></script>
-  <script>
-    (function(){
-      layOutDay([
-        {start:  30, end: 150},
-        {start: 540, end: 600},
-        {start: 560, end: 620},
-        {start: 610, end: 670}
-      ]);
-      // layOutDay([
-      //   {start:   0, end: 150},
-      //   {start:   0, end: 360},
-      //   {start:   0, end: 600},
-      //   {start:  20, end: 360},
-      //   {start:  20, end: 360},
-      //   {start: 100, end: 300},
-      //   {start: 150, end: 400},
-      //   {start: 160, end: 350},
-      //   {start: 310, end: 600},
-      //   {start: 400, end: 600},
-      //   {start: 400, end: 600},
-      //   {start: 400, end: 600},
-      //   {start: 410, end: 600},
-      //   {start: 420, end: 600},
-      //   {start: 600, end: 660},
-      //   {start: 600, end: 720},
-      //   {start: 600, end: 720},
-      //   {start: 660, end: 720},
-      // ]);
-    }())
-  </script>
+</div>
+
+<script src="dist/calendar.min.js"></script>
+<script>
+  (function () {
+    layOutDay([
+      { start: 30, end: 150 },
+      { start: 540, end: 600 },
+      { start: 560, end: 620 },
+      { start: 610, end: 670 }
+    ]);
+    // layOutDay([
+    //   {start:   0, end: 150},
+    //   {start:   0, end: 360},
+    //   {start:   0, end: 600},
+    //   {start:  20, end: 360},
+    //   {start:  20, end: 360},
+    //   {start: 100, end: 300},
+    //   {start: 150, end: 400},
+    //   {start: 160, end: 350},
+    //   {start: 310, end: 600},
+    //   {start: 400, end: 600},
+    //   {start: 400, end: 600},
+    //   {start: 400, end: 600},
+    //   {start: 410, end: 600},
+    //   {start: 420, end: 600},
+    //   {start: 600, end: 660},
+    //   {start: 600, end: 720},
+    //   {start: 600, end: 720},
+    //   {start: 660, end: 720},
+    // ]);
+  }())
+</script>
